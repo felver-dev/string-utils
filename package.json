@@ -1,0 +1,39 @@
+{
+  "name": "@felver-dev/string-utils",
+  "version": "1.0.0",
+  "description": "Utilaires de manipulation de chaines de caratères",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.cjs",
+    "dev": "rollup -c rollup.config.cjs -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "publishConfig": {
+    "@felver-dev:registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.3",
+    "rollup": "^4.44.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-jest": "^29.4.0"
+  }
+}
